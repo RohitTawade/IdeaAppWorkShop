@@ -4,10 +4,7 @@
  * It explains the different fields of use and how it will be
  * stored in the mongodb
  */
-
 const mongoose = require('mongoose');
-
-
 const userSchema = new mongoose.Schema({
 
    name : {
@@ -38,11 +35,9 @@ const userSchema = new mongoose.Schema({
     enum : ["CUSTOMER", "ADMIN"]
    }
    
-
 },{timestamps : true});
 
 /**
  * Define the collection name where it will be stored
  */
-
 module.exports = mongoose.model("User", userSchema);
